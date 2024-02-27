@@ -1,0 +1,26 @@
+Package: lordifmultiverse
+Type: Package
+Version: 0.1.0
+Date: 2024-02-27
+Title: Multiverse Analysis for Logistic Regression Differential Item Functioning
+Authors@R: person("Constantin Yves", "Plessen", email = "yves.plessen@proton.me", role = c("aut", "cre"))
+Description: Implements a multiverse analysis approach for exploring Differential Item Functioning (DIF) using logistic regression across multiple specifications. It allows for robust examination of DIF across various criteria and thresholds, leveraging the 'lordif' package for the underlying analysis. The package also provides functionality for visualizing the results of these analyses, facilitating a comprehensive understanding of DIF presence in item response data.
+Depends:
+    R (>= 3.5.0)
+Imports:
+    lordif,
+    dplyr,
+    tidyr,
+    ggplot2,
+    cowplot
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr
+URL: https://github.com/cyplessen/lordifmultiverse
+BugReports: https://github.com/cyplessen/lordifmultiverse/issues
