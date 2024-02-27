@@ -1,12 +1,12 @@
 ---
-title: "Introduction to lordifMultiverse"
+title: "Vignette: Introduction to lordifMultiverse"
 author: "Constantin Yves Plessen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introduction to lordifMultiverse}
+  %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
