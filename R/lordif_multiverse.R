@@ -9,6 +9,7 @@
 #' individuals and columns represent items.
 #' @param group A vector indicating the group membership for each individual in
 #' 'items'. The length of 'group' must match the number of rows in 'items'.
+#' @param custom_criteria_thresholds Optional. A list where each element's name is a criterion (e.g., "Chisqr", "Beta") and each element is a vector of thresholds for that criterion. If NULL, default criteria and thresholds are used.
 #' @param verbose A logical value indicating whether to print detailed processing
 #' messages. Defaults to FALSE.
 #'
@@ -43,15 +44,20 @@
 #' @importFrom dplyr %>% mutate filter
 #' @importFrom tidyr separate_rows pivot_wider
 
-lordif_multiverse <- function(items, group, verbose = FALSE) {
-  # Define criteria and their respective thresholds in a list
-  criteria_thresholds <- list(
-    Chisqr = c(0.0001, 0.001, 0.01),
-    Beta = c(0.05, 0.1),
-    CoxSnell = c(0.02, 0.03, 0.04, 0.05, 0.06),
-    Nagelkerke = c(0.02, 0.03, 0.04, 0.05, 0.06),
-    McFadden = c(0.02, 0.03, 0.04, 0.05, 0.06)
-  )
+lordif_multiverse <- function(items, group, custom_criteria_thresholds = NULL, verbose = FALSE) {
+  
+  # Use default criteria and thresholds if custom ones are not provided
+  if (is.null(custom_criteria_thresholds)) {
+    criteria_thresholds <- list(
+      Chisqr = c(0.0001, 0.001, 0.01),
+      Beta = c(0.05, 0.1),
+      CoxSnell = c(0.02, 0.03, 0.04, 0.05, 0.06),
+      Nagelkerke = c(0.02, 0.03, 0.04, 0.05, 0.06),
+      McFadden = c(0.02, 0.03, 0.04, 0.05, 0.06)
+    )
+  } else {
+    criteria_thresholds <- custom_criteria_thresholds
+  }
 
   # Function to generate specifications based on criteria and thresholds
   generate_specifications <- function(criteria_thresholds) {
