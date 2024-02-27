@@ -1,2 +1,5 @@
 ^doc$
 ^Meta$
+^README\.html$
+^lordifMultiverse\.Rproj$
+^setup\.R$
