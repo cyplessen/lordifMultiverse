@@ -12,7 +12,6 @@ vignette: >
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -24,6 +23,8 @@ knitr::opts_chunk$set(
 
 The `lordifMultiverse` package provides a comprehensive toolkit for detecting differential item functioning (DIF) across multiple criteria and thresholds. This package is designed to facilitate the exploration of DIF in a multiverse analysis context, allowing users to assess the robustness of their findings across a range of analytical decisions.
 
+<br>
+
 ## Installation
 
 To install the latest version of `lordifMultiverse` from GitHub, use the following commands:
@@ -32,6 +33,7 @@ To install the latest version of `lordifMultiverse` from GitHub, use the followi
 devtools::install_github("cyplessen/lordifMultiverse")
 ```
 
+<br>
 
 # Basic Usage
 
@@ -65,14 +67,18 @@ results <- lordif_multiverse(items = items_anxiety, group = group_age)
 results
 ```
 
+<br>
+
 # Visualizing Results
 
 To visualize the results of the lordif_multiverse function, you can use the plot_lordif_multiverse function. This function creates a comprehensive plot showing how many items were flagged for DIF across different criteria and thresholds.
 
-```{r, fig.width=12, fig.height=8}
+```{r, fig.width=8, fig.height=8}
 # Assuming `results` contains the output from lordif_multiverse
 plot_lordif_multiverse(results, items_anxiety)
 ```
+
+<br>
 
 # Advanced Usage
 
@@ -96,11 +102,13 @@ results_custom <- lordif_multiverse(items = items_anxiety,
 ```
 
 
-```{r , fig.width=12, fig.height=8}
+```{r, fig.width=8, fig.height=8}
 results_custom
 
 plot_lordif_multiverse(results_custom, items_anxiety)
 ```
+
+<br>
 
 # Conclusion
 
