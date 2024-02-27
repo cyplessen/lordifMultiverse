@@ -4,11 +4,11 @@
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/yourusername/lordifMultiverse) with:
+You can install the development version from [GitHub](https://github.com/cyplessen/lordifMultiverse) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("yourusername/lordifMultiverse")
+devtools::install_github("cyplessen/lordifMultiverse")
 ```
 
 ## Usage
@@ -18,9 +18,11 @@ Here's a basic example of how to use lordifMultiverse:
 ``` r
 library(lordifMultiverse)
 
-
 # Assuming 'items' is a dataframe of item responses and 'group' is a binary group variable
 results <- lordif_multiverse(items = your_data, group = your_group_variable)
+
+# Visualizing how many items were flagged by each method.
+plot <- plot_lordif_multiverse(results)
 ```
 
 For more detailed usage and examples, please refer to the vignettes:

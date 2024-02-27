@@ -4,7 +4,12 @@
 \alias{lordif_multiverse}
 \title{Perform Multiverse Logistic Regression DIF Analysis}
 \usage{
-lordif_multiverse(items, group, verbose = FALSE)
+lordif_multiverse(
+  items,
+  group,
+  custom_criteria_thresholds = NULL,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{items}{A data frame or matrix of item responses, where rows represent
@@ -12,6 +17,8 @@ individuals and columns represent items.}
 
 \item{group}{A vector indicating the group membership for each individual in
 'items'. The length of 'group' must match the number of rows in 'items'.}
+
+\item{custom_criteria_thresholds}{Optional. A list where each element's name is a criterion (e.g., "Chisqr", "Beta") and each element is a vector of thresholds for that criterion. If NULL, default criteria and thresholds are used.}
 
 \item{verbose}{A logical value indicating whether to print detailed processing
 messages. Defaults to FALSE.}
