@@ -4,7 +4,7 @@ author: "Constantin Yves Plessen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Vignette: Introduction to lordifMultiverse}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -30,7 +30,7 @@ The `lordifMultiverse` package provides a comprehensive toolkit for detecting di
 To install the latest version of `lordifMultiverse` from GitHub, use the following commands:
 
 ```{r, eval=FALSE}
-devtools::install_github("cyplessen/lordifMultiverse")
+devtools::install_github("cyplessen/lordifMultiverse", build_vignettes=TRUE)
 ```
 
 <br>

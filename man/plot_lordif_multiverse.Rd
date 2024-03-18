@@ -54,7 +54,8 @@ identified_items = c(NA, "R9-R11-R24", "R9-R11-R18-R24",
               NA, NA, NA)),
 row.names = c(NA, -20L),
 class = "data.frame")
-
+\donttest{
 plot_lordif_multiverse(specification_results, items = items_anxiety)
+}
 
 }

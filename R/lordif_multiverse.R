@@ -33,8 +33,7 @@
 #'
 #' # Run multiverse analysis for different grouping variables
 #' # The examples below are wrapped in \donttest{} to avoid long execution times
-#' # during package checking. Remove \donttest{} if you want them to be executed
-#' # during R CMD check.
+#' # during package checking. Remove \donttest{} if you want them to be executed.
 #' \donttest{
 #' multiverse_age <- lordif_multiverse(items_anxiety, group_age)
 #' }

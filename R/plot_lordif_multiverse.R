@@ -43,9 +43,10 @@
 #'               NA, NA, NA)),
 #' row.names = c(NA, -20L),
 #' class = "data.frame")
-#'
+#' \donttest{
 #' plot_lordif_multiverse(specification_results, items = items_anxiety)
-#'
+#' }
+#' 
 #' @importFrom ggplot2 ggplot aes geom_histogram theme_minimal labs geom_boxplot scale_fill_viridis_d scale_x_continuous scale_y_continuous coord_flip theme
 #' @importFrom dplyr mutate row_number rename_with all_of c_across everything rowwise ungroup
 #' @importFrom tidyr pivot_wider separate_rows
@@ -56,7 +57,7 @@ plot_lordif_multiverse <- function(specification_results, items) {
   # Check if all identified_items are missing
   if(all(is.na(specification_results$identified_items))) {
     data_flagged_items <- specification_results %>%
-      mutate(sum = 0, criterion = paste(specification, ": ", threshold))
+      dplyr::mutate(sum = 0, criterion = paste(specification, ": ", threshold))
   } else {
     # Proceed with the original data processing if not all identified_items are missing
 
